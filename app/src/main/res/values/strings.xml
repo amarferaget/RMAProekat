@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProektniZadatakRMA</string>
+    <string name="b_glumci">Glumci</string>
+    <string name="b_reziseri">Režiseri</string>
+    <string name="b_zanrovi">Zanrovi</string>
+</resources>
