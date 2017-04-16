@@ -39,7 +39,7 @@
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/tv_resizer_grad"
+        android:id="@+id/tv_reziser_grad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv_reziser_godiste"

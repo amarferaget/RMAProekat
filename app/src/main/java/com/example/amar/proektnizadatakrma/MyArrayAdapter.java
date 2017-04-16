@@ -39,7 +39,7 @@ public class MyArrayAdapter extends ArrayAdapter {
             mViewHolder.ime=(TextView)convertView.findViewById(R.id.tv_reziser_ime);
             mViewHolder.prezime=(TextView)convertView.findViewById(R.id.tv_prezime);
             mViewHolder.godiste=(TextView)convertView.findViewById(R.id.tv_reziser_godiste);
-            mViewHolder.mjestoRodenja=(TextView)convertView.findViewById(R.id.tv_resizer_grad);
+            mViewHolder.mjestoRodenja=(TextView)convertView.findViewById(R.id.tv_reziser_grad);
             mViewHolder.rating=(TextView)convertView.findViewById(R.id.tv_rating);
 
 

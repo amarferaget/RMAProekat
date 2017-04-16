@@ -1,14 +1,19 @@
 package com.example.amar.proektnizadatakrma;
 
 import android.media.Image;
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.widget.ImageView;
 
 /**
  * Created by Amar on 31.03.2017..
  */
 
-public class Glumac {
-    String ime,prezime,godinaRodenja,mjestoRodenja,spol,link,biografija,rating;
+public class Glumac implements Parcelable{
+
+    private String ime,prezime,godinaRodenja,mjestoRodenja,spol,link,biografija,rating;
+
+    public Glumac(){}
 
     public Glumac(String ime, String prezime, String godinaRodenja, String mjestoRodenja, String spol, String link, String biografija, String rating) {
         this.ime = ime;
@@ -20,6 +25,30 @@ public class Glumac {
         this.biografija = biografija;
         this.rating = rating;
     }
+
+    protected Glumac(Parcel in)
+    {
+        ime=in.readString();
+        prezime=in.readString();
+        godinaRodenja=in.readString();
+        mjestoRodenja=in.readString();
+        spol=in.readString();
+        link=in.readString();
+        biografija=in.readString();
+        rating=in.readString();
+    }
+
+    public static final Creator<Glumac> CREATOR=new Creator<Glumac>() {
+        @Override
+        public Glumac createFromParcel(Parcel source) {
+            return new Glumac(source);
+        }
+
+        @Override
+        public Glumac[] newArray(int size) {
+            return new Glumac[size];
+        }
+    };
 
     public String getIme() {
         return ime;
@@ -83,5 +112,21 @@ public class Glumac {
 
     public void setRating(String rating) {
         this.rating = rating;
+    }
+
+    @Override
+    public int describeContents() {return  0;}
+
+    @Override
+    public void writeToParcel(Parcel dest,int flags)
+    {
+        dest.writeString(ime);
+        dest.writeString(prezime);
+        dest.writeString(godinaRodenja);
+        dest.writeString(mjestoRodenja);
+        dest.writeString(spol);
+        dest.writeString(link);
+        dest.writeString(biografija);
+        dest.writeString(rating);
     }
 }
