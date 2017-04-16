@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity implements FragmentListaGlum
         arguments.putParcelable("glumac",glumci.get(pos));
         FragmentDetaljiGlumac fdg=new FragmentDetaljiGlumac();
         fdg.setArguments(arguments);
-        if(siri)
-        {
-            getFragmentManager().beginTransaction().replace(R.id.frameF2,fdg).commit();
-        }
-        else
-        {
+        //if(siri)
+        //{
+        //    getFragmentManager().beginTransaction().replace(R.id.frameF2,fdg).commit();
+        //}
+        //else
+        //{
             getFragmentManager().beginTransaction().replace(R.id.frameF1,fdg).addToBackStack(null).commit();
-        }
+        //}
 
     }
 
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements FragmentListaGlum
         zanrovi.add(new Zanr("Rok"));
         zanrovi.add(new Zanr("Pop"));
         final FragmentManager fm=getFragmentManager();
-        FrameLayout ldetalji=(FrameLayout)findViewById(R.id.frameF2);
+        /*FrameLayout ldetalji=(FrameLayout)findViewById(R.id.frameF2);
         if(ldetalji!=null)
         {
             siri=true;
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements FragmentListaGlum
                 fm.beginTransaction().replace(R.id.frameF2,fd).commit();
             }
         }
-
+*/
 
         FragmentListaGlumaca flg=(FragmentListaGlumaca)fm.findFragmentByTag("ListaGlumci");
         if(flg==null)
